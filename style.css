@@ -1,0 +1,316 @@
+
+/* 1. General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: white;
+    line-height: 1.6;
+}
+
+/* 2. Navigation Bar */
+header {
+    width: 100%;
+    background: #101010;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e9a23b;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e9a23b;
+}
+
+.nav-button,
+.primary-button {
+    background: #e9a23b;
+    color: #101010;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: #ffc15c;
+    transform: translateY(-3px);
+}
+
+/* 3. Hero Section */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,0.95),
+        rgba(0,0,0,0.55)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600")
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle,
+.section-heading p {
+    color: #e9a23b;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e9a23b;
+}
+
+.hero-description {
+    color: #ddd;
+    font-size: 18px;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    border: 1px solid #e9a23b;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.secondary-button:hover {
+    background: #e9a23b;
+    color: black;
+}
+
+/* 4. About Section */
+.about {
+    padding: 90px 8%;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about > p {
+    color: #bbb;
+    font-size: 18px;
+}
+
+/* 5. Menu Section */
+.menu {
+    padding: 80px 8%;
+    background: #181818;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.menu-card {
+    background: #242424;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-card h3,
+.menu-card p,
+.menu-card span {
+    margin: 12px 18px;
+    display: block;
+}
+
+.menu-card p {
+    color: #bbb;
+}
+
+.menu-card span {
+    color: #e9a23b;
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+
+/* 6. Contact Section */
+.contact {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.contact > p {
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+/* 7. Footer */
+footer {
+    background: #080808;
+    padding: 25px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+/* 8. Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 60px 6%;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
+
+.order-btn {
+    background: #e9a23b;
+    color: #101010;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 18px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #ffc15c;
+    transform: translateY(-3px);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.contact-info div {
+    background: #242424;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    color: #e9a23b;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
